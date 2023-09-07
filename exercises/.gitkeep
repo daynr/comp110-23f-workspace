@@ -1,0 +1,3 @@
+$ git config --global user.name "Nathan Day"
+$ git config --global user.email "daynr@unc.edu"
+.git

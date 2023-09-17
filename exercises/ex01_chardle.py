@@ -6,12 +6,17 @@ __author__ = 730690615
 word = input("Enter a 5-character word: ")
 char = input("Enter a single character: ")
 
-# Check if the character input is a single character
-if len(char) == 1:
-    # Checking the Length
+# Move the length check outside of the main code
+if len(word) != 5:
+    print("Word must contain 5 characters")
+          
+# Move the length of character outside of the main code
+elif len(char) != 1:
+    print("Character must be a single character.")
 
-    if len(word) == 5:
-        found = False
+else:
+    found = False
+
     # Create a variable to count matching characters
     count = 0
 
@@ -38,24 +43,12 @@ if len(char) == 1:
         found = True
 
     # Check the count to determine the result
-    if count == 0:
-        print(f"{char} not found in {word}")
-    elif count == 1:
+
+    if count == 1:
         print(f"{count} instance of {char} found in {word}")
     else:
         print(f"{count} instances of {char} found in {word}")
 
     # Check the flag to determine the result
     if not found:
-        print(f"{char} not found in {word}")
-    
-    else:
-        print("Word must contain 5 characters")
-
-# Move the length check outside of the main code
-elif len(word) != 5:
-    print("Word must contain 5 characters")
-          
-# Move the length of character outside of the main code
-elif len(char) != 0:
-    print("Character must be a single character.")
+        print(f"No instances of {char} found in {word}")

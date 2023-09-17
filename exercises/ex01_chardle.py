@@ -9,36 +9,35 @@ char = input("Enter a single character: ")
 # Move the length check outside of the main code
 if len(word) != 5:
     print("Word must contain 5 characters")
-          
+    exit()
 # Move the length of character outside of the main code
 elif len(char) != 1:
     print("Character must be a single character.")
-
+    exit()
 else:
     found = False
 
     # Create a variable to count matching characters
     count = 0
 
-    # Checking the Indexes
-    if word[0] == char:
-        print(f"{char} found in {word} at index 0")
-        count += 1
-        found = True
+if word[0] == char:
+    print(f"{char} found at index 0")
+    count += 1
+    found = True
     if word[1] == char:
-        print(f"{char} found in {word} at index 1")
+        print(f"{char} found at index 1")
         count += 1
         found = True
     if word[2] == char:
-        print(f"{char} found in {word} at index 2")
+        print(f"{char} found at index 2")
         count += 1
         found = True
     if word[3] == char:
-        print(f"{char} found in {word} at index 3")
+        print(f"{char} found at index 3")
         count += 1 
         found = True
     if word[4] == char:
-        print(f"{char} found in {word} at index 4")
+        print(f"{char} found at index 4")
         count += 1
         found = True
 

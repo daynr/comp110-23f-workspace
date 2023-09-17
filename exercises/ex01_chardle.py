@@ -1,7 +1,7 @@
 """EX01 - Chardle - A cute step toward Wordle."""
 
 
-__author__ = 730690615
+str("__author__ = 730690615")
 
 # Prompting the Inputs
 word = input("Enter a 5-character word: ")

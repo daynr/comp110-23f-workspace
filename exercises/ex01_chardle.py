@@ -1,7 +1,6 @@
 """EX01 - Chardle - A cute step toward Wordle."""
 
-
-str("__author__ = 730690615")
+__author__ = 730690615
 
 # Prompting the Inputs
 word = input("Enter a 5-character word: ")
@@ -41,8 +40,10 @@ if len(char) == 1:
     # Check the count to determine the result
     if count == 0:
         print(f"{char} not found in {word}")
+    elif count == 1:
+        print(f"{count} instance of {char} found in {word}")
     else:
-        print(f"{count} instance(s) of {char} found in {word}")
+        print(f"{count} instances of {char} found in {word}")
 
     # Check the flag to determine the result
     if not found:

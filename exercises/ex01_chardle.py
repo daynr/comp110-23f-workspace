@@ -20,24 +20,29 @@ else:
     # Create a variable to count matching characters
     count = 0
 
-if word[0] == char:
-    print(f"{char} found at index 0")
-    count += 1
-    found = True
+    if word[0] == char:
+        print(f"{char} found at index 0")
+        print(f"Searching for {char} in {word}")
+        count += 1
+        found = True
     if word[1] == char:
+        print(f"Searching for {char} in {word}")
         print(f"{char} found at index 1")
         count += 1
         found = True
     if word[2] == char:
         print(f"{char} found at index 2")
+        print(f"Searching for {char} in {word}")
         count += 1
         found = True
     if word[3] == char:
         print(f"{char} found at index 3")
+        print(f"Searching for {char} in {word}")
         count += 1 
         found = True
     if word[4] == char:
         print(f"{char} found at index 4")
+        print(f"Searching for {char} in {word}")
         count += 1
         found = True
 

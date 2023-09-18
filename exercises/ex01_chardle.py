@@ -5,6 +5,7 @@ __author__ = "730690615"
 # Prompting the Inputs
 word = input("Enter a 5-character word: ")
 char = input("Enter a single character: ")
+print(f"Searching for {char} in {word}")
 
 # Move the length check outside of the main code
 if len(word) != 5:

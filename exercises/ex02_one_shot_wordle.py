@@ -13,13 +13,13 @@ secret_word = "python"
 # Length of the secret word
 secret_word_length = len(secret_word)
 
-while not False:
+while True:
     # Ask the user for a guess
-    user_guess = input(f"What is your {secret_word_length}-letter guess? ")
+    user_guess = input(f"What is your {len(secret_word)}-letter guess? ")
 
     # Check if the guess has the correct length
     if len(user_guess) != secret_word_length:
-        print(f"That was not {secret_word_length} letters! Try again: ")
+        print(f"That was not {len(secret_word)} letters! Try again: ")
     else:
         # Define variables
         index = 0

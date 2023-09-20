@@ -15,7 +15,7 @@ secret_word_length = len(secret_word)
 
 while True:
     # Ask the user for a guess
-    user_guess = input(f"What is your {secret_word_length}-letter guess? ").lower()
+    user_guess = input(f"What is your {secret_word_length}-letter guess? ")
 
     # Check if the guess has the correct length
     if len(user_guess) != secret_word_length:

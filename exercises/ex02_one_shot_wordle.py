@@ -1,4 +1,4 @@
-"""A One-Shot to Success"""
+"""A One-Shot to Success!"""
 
 __author__ = "730690615"
 
@@ -13,7 +13,10 @@ secret_word = "python"
 # Length of the secret word
 secret_word_length = len(secret_word)
 
-while True:
+# Boolean flag
+correct_guess = False
+
+while not correct_guess:
     # Ask the user for a guess
     user_guess = input(f"What is your {secret_word_length}-letter guess? ")
 
@@ -47,6 +50,6 @@ while True:
         # Check if the guess is correct
         if user_guess == secret_word:
             print("Woo! You got it!")
-            break
+            correct_guess = True
         else:
             print("Not quite. Play again soon!")

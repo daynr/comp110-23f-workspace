@@ -13,10 +13,7 @@ secret_word = "python"
 # Length of the secret word
 secret_word_length = len(secret_word)
 
-# Boolean flag
-correct_guess = False
-
-while not correct_guess:
+while not False:
     # Ask the user for a guess
     user_guess = input(f"What is your {secret_word_length}-letter guess? ")
 
@@ -34,7 +31,7 @@ while not correct_guess:
             if user_guess[index] == secret_word[index]:
                 # If they match concatenate a GREEN_BOX emoji
                 result_emoji += GREEN_BOX
-            elif user_guess[index] in secret_word:
+            elif secret_word.count(user_guess[index]) > 0:
                 # If the letter is in the word but at the wrong position concatenate a YELLOW_BOX emoji
                 result_emoji += YELLOW_BOX
             else:
@@ -50,6 +47,7 @@ while not correct_guess:
         # Check if the guess is correct
         if user_guess == secret_word:
             print("Woo! You got it!")
-            correct_guess = True
+            break
+
         else:
             print("Not quite. Play again soon!")

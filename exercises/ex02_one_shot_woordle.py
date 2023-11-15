@@ -13,18 +13,17 @@ secret_word = "python"
 # Length of the secret word
 secret_word_length = len(secret_word)
 
-while True:
-    try:
-        # Ask the user for a guess
-        user_guess = input(f"What is your {len(secret_word)}-letter guess? ")
+while not False:
+    # Ask the user for a guess
+    user_guess = input(f"What is your {secret_word_length}-letter guess? ")
 
     # Check if the guess has the correct length
-        if len(user_guess) != secret_word_length:
-            print(f"That was not {len(secret_word)} letters! Try again: ")
-        else:
-            # Define variables
-            index = 0
-            result_emoji = ""
+    if len(user_guess) != secret_word_length:
+        print(f"That was not {secret_word_length} letters! Try again: ")
+    else:
+        # Define variables
+        index = 0
+        result_emoji = ""
 
         # Iterate through each character in the guess
         while index < secret_word_length:
@@ -52,8 +51,3 @@ while True:
 
         else:
             print("Not quite. Play again soon!")
-
-    except EOFError:
-        # Hopful to fix this error
-        print("EOFError: Found.")
-        break

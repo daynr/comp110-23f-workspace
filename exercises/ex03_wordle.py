@@ -1,9 +1,9 @@
-# My Approach to a Structured Wordle!
+"""My Approach to a Structured Wordle!"""
 
 __author__ = "730690615"
 
 
-def contains_char(word, char):
+def contains_char(word: str, char: str) -> bool:
     """Check if char is contained in the word."""
     assert len(char) == 1  # Ensure char is a single character
     i = 0
@@ -14,7 +14,7 @@ def contains_char(word, char):
     return False
 
 
-def emojified(guess, secret):
+def emojified(guess: str, secret: str) -> str:
     """Generate emoji-based feedback for the guess."""
     assert len(guess) == len(secret)  # Ensure guess and secret have the same length
     feedback = ""
@@ -30,7 +30,7 @@ def emojified(guess, secret):
     return feedback
 
 
-def input_guess(expected_length):
+def input_guess(expected_length: int) -> str:
     """Prompt the user for a guess of the expected length."""
     guess = input(f"Enter a {expected_length} character word: ")
     while len(guess) != expected_length:
@@ -63,5 +63,6 @@ def main() -> None:
     else:
         print(f"X/{max_turns} - Sorry, try again tomorrow!")
 
-    if __name__ == "__main__":
-        main()
+
+if __name__ == "__main__":
+    main()
